@@ -14,6 +14,10 @@ public class Main {
         tree.add(15);
         tree.add(6);
         System.out.println(tree);
+        System.out.println();
+        System.out.println(tree.findMin());
+        System.out.println();
+        System.out.println(tree.findMax());
     }
     //notes from js
 

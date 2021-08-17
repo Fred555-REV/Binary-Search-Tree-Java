@@ -40,6 +40,23 @@ public class BST {
 
     }
 
+    public NodeBST findMin() {
+        NodeBST minNode = root;
+        while (minNode.left != null) {
+            minNode = minNode.left;
+        }
+        System.out.println(minNode.data);
+        return minNode;
+    }
+
+    public NodeBST findMax() {
+        NodeBST maxNode = root;
+        while (maxNode.right != null) {
+            maxNode = maxNode.right;
+        }
+        System.out.println(maxNode.data);
+        return maxNode;
+    }
 
     @Override
     public String toString() {

@@ -19,9 +19,9 @@ public class NodeBST {
 
     @Override
     public String toString() {
-        return Color.getColor(order) + "\nNodeBST{" +
-                "data='" + data + '\'' + "\nleft=" + left +
-                Color.getColor(order) + "\nright=" + right +
+        return Color.getColor(order) + "NodeBST{\n" +
+                "data= '" + data + '\'' + "\nleft= " + left +
+                Color.getColor(order) + "\nright= " + right +
                 Color.getColor(order) + '}' + Color.RESET;
     }
 }
