@@ -1,11 +1,17 @@
 package trees.binary.search;
 
+import trees.binary.Color;
+import trees.binary.Main;
+
 public class NodeBST {
-    public String data;
+    public int order = 0;
+    public Integer data;
     public NodeBST left;
     public NodeBST right;
 
-    public NodeBST(String data) {
+    public NodeBST(int data) {
+        Main.order++;
+        this.order = Main.order;
         this.data = data;
         this.left = null;
         this.right = null;
@@ -13,10 +19,9 @@ public class NodeBST {
 
     @Override
     public String toString() {
-        return "NodeBST{" +
-                "data='" + data + '\'' +
-                ", left=" + left +
-                ", right=" + right +
-                '}';
+        return Color.getColor(order) + "\nNodeBST{" +
+                "data='" + data + '\'' + "\nleft=" + left +
+                Color.getColor(order) + "\nright=" + right +
+                Color.getColor(order) + '}' + Color.RESET;
     }
 }
