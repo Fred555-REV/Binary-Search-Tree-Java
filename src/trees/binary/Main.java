@@ -8,11 +8,18 @@ public class Main {
     public static void main(String[] args) {
 
         BST tree = new BST();
-        tree.add(10);
+        tree.add(25);
+        tree.add(14);
+        tree.add(12);
         tree.add(5);
+        tree.add(19);
+        tree.add(37);
+        tree.add(29);
         tree.add(7);
+        tree.add(40);
+        tree.add(1);
         tree.add(15);
-        tree.add(6);
+        tree.add(70);
         System.out.println(tree);
         System.out.println();
         System.out.println(tree.findMin());

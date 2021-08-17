@@ -1,7 +1,9 @@
 package trees.binary.search;
 
+import com.sun.source.tree.BreakTree;
+
 public class BST {
-    private NodeBST root;
+    public NodeBST root;
 
     public BST() {
         this.root = null;
@@ -56,6 +58,44 @@ public class BST {
         }
         System.out.println(maxNode.data);
         return maxNode;
+    }
+
+    public void removeData(int data) {
+        removeNode(null, data);
+        this.root = removeNode(this.root, data);
+    }
+
+    public NodeBST removeNode(NodeBST node, int data) {
+        if (node == null) {
+            return null;
+        }
+        if (data == node.data) {
+
+            if (node.left == null && node.right == null) {
+                return null;
+            }
+            if (node.right == null) {
+                return node.left;
+            }
+            if (node.left == null) {
+                return node.right;
+            }
+
+            NodeBST tempNode = node.right;
+            while (tempNode.left != node) {
+                tempNode = tempNode.left;
+            }
+            node.data = tempNode.data;
+            node.right = removeNode(node.right, data);
+            return node;
+        } else if (data < node.data) {
+            node.left = removeNode(node.left, data);
+            return node;
+        } else {
+            node.right = removeNode(node.right, data);
+            return node;
+        }
+
     }
 
     @Override
