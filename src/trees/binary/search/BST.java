@@ -82,7 +82,7 @@ public class BST {
             }
 
             NodeBST tempNode = node.right;
-            while (tempNode.left != node) {
+            while (tempNode.left != null) {
                 tempNode = tempNode.left;
             }
             node.data = tempNode.data;

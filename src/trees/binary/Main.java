@@ -25,6 +25,9 @@ public class Main {
         System.out.println(tree.findMin());
         System.out.println();
         System.out.println(tree.findMax());
+        tree.removeData(5);
+        tree.removeData(37);
+        System.out.println(tree);
     }
     //notes from js
 
